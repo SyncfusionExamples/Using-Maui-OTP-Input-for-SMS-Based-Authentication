@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OtpInput.MainPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolkit.OtpInput;assembly=Syncfusion.Maui.Toolkit">
+
+    <StackLayout >
+        <StackLayout Padding="30" Spacing="20" x:Name="Loginpage">
+        <Label Text="Login" FontSize="24" HorizontalOptions="Center" />
+        <Entry x:Name="EmailEntry" Placeholder="Enter your email" Keyboard="Email" WidthRequest="250"/>
+            <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True" WidthRequest="250"/>
+            <Button Text="Login" Clicked="OnLoginClicked" WidthRequest="150"/>
+    </StackLayout>
+    <StackLayout x:Name="ValidationPage" IsVisible="False" HorizontalOptions="Center" Spacing="25">
+        <syncfusion:SfOtpInput x:Name="OtpInput" 
+                               Length="6" 
+                               />
+            <Button x:Name="ValidateButton" Text="Submit" Clicked="OnSubmitClicked" WidthRequest="150"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
